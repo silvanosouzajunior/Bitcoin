@@ -41,14 +41,6 @@ class DataManager {
                 self.delegate?.updateMarketPrices(marketPrices: marketPrices)
             }
         })
-        
-        PriceRequester.shared.marketPlaceStats(completion: {
-            actualPrice in
-            
-            if let actualPrice = actualPrice {
-                self.delegate?.updateActualPrice(actualPrice: actualPrice)
-            }
-        })
     }
 }
 
